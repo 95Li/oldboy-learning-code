@@ -5,10 +5,25 @@
       <change beforePath="" afterPath="$PROJECT_DIR$/days71/李谊君-今日测试.py" />
       <change beforePath="" afterPath="$PROJECT_DIR$/dys71_dj/.idea/dataSources.local.xml" />
       <change beforePath="" afterPath="$PROJECT_DIR$/dys71_dj/.idea/dataSources.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dys71_dj/.idea/dataSources/b6480d53-55eb-4454-beec-76ca36951e86.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dys71_dj/.idea/dataSources/b6480d53-55eb-4454-beec-76ca36951e86/storage_v2/_src_/schema/main.uQUzAA.meta" />
       <change beforePath="" afterPath="$PROJECT_DIR$/dys71_dj/.idea/dys71_dj.iml" />
       <change beforePath="" afterPath="$PROJECT_DIR$/dys71_dj/.idea/misc.xml" />
       <change beforePath="" afterPath="$PROJECT_DIR$/dys71_dj/.idea/modules.xml" />
       <change beforePath="" afterPath="$PROJECT_DIR$/dys71_dj/.idea/workspace.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dys71_dj/app01/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dys71_dj/app01/admin.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dys71_dj/app01/apps.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dys71_dj/app01/migrations/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dys71_dj/app01/models.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dys71_dj/app01/tests.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dys71_dj/app01/views.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dys71_dj/db.sqlite3" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dys71_dj/dys71_dj/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dys71_dj/dys71_dj/settings.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dys71_dj/dys71_dj/urls.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dys71_dj/dys71_dj/wsgi.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dys71_dj/manage.py" />
       <change beforePath="" afterPath="$PROJECT_DIR$/dys71_dj/my_deprecation/my_depre.py" />
       <change beforePath="" afterPath="$PROJECT_DIR$/dys71_dj/static/bootstrap-3.3.7/css/bootstrap.min.css" />
       <change beforePath="" afterPath="$PROJECT_DIR$/dys71_dj/static/bootstrap-3.3.7/fonts/glyphicons-halflings-regular.eot" />
@@ -214,8 +229,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="188" />
-    <option name="y" value="44" />
+    <option name="x" value="41" />
+    <option name="y" value="40" />
     <option name="width" value="1299" />
     <option name="height" value="698" />
   </component>
@@ -787,7 +802,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="188" y="44" width="1299" height="698" extended-state="0" />
+    <frame x="41" y="40" width="1299" height="698" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29553902" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3550186" sideWeight="0.50680786" order="7" side_tool="true" content_ui="tabs" />
