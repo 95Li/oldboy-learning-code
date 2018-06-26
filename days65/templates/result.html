@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RESULT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/jquery-3.3.1.min.js">
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7/js/bootstrap.min.js">
+
+    <style>
+        div {
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <table class="table col-md-8">
+            <thead>
+            <tr>
+                <td>姓名</td>
+                <td>THML</td>
+                <td>PYTHON</td>
+                <td>CSS</td>
+                <td>JS</td>
+                <td>总计</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{ name }}</td>
+                {% for num in result.values %}
+                    <td>{{ num }}</td>
+                {% endfor %}
+            {% load filters %}
+                <td>{{ result.values|sum}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

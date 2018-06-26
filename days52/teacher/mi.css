@@ -1,0 +1,160 @@
+/*
+小米商城课上示例文件的样式
+*/
+
+/*通用样式区*/
+body {
+    margin: 0;
+}
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 导航条 样式区*/
+.nav {
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+}
+
+.nav a {
+    color: #ccc;
+    line-height: 50px;
+}
+
+.nav a:hover {
+    color: white;
+}
+
+.nav-left li {
+    float: left;
+    margin-right: 15px;
+}
+
+.container {
+    width: 1226px;
+    margin: 0 auto;
+}
+
+.nav-right li {
+    float: right;
+    margin-left: 15px;
+}
+
+/*顶部菜单区*/
+.top-menu {
+    height: 88px;
+    width: 100%;
+    margin-top: 50px;
+    padding-top: 20px;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+/*顶部列表区*/
+.top-list li {
+    float: left;
+    margin-right: 15px;
+    height: 55px;
+}
+
+.top-list {
+    padding-left: 14px;
+}
+
+.top-list a {
+    color: black;
+    line-height: 55px;
+}
+
+.top-list a:hover {
+    color: #ff6700;
+}
+
+.search-tool {
+    height: 88px;
+    width: 304px;
+    position: relative;
+}
+
+.search-tool input[type='text'] {
+    height: 45px;
+    width: 240px;
+    outline: 0;
+
+}
+
+.search-tool input[type='button'] {
+    height: 51px;
+    width: 54px;
+}
+
+/*左侧菜单区*/
+.left-menu {
+    width: 234px;
+    padding: 20px 0;
+    background-color: rgb(43, 86, 181);
+}
+
+.left-menu li {
+    height: 42px;
+    padding-left: 40px;
+}
+
+.left-menu li:hover {
+    background-color: #ff6700;
+}
+
+.left-menu a {
+    color: white;
+    line-height: 42px;
+}
+
+/*首屏下面的广告区*/
+
+.page-ad {
+    margin-top: 20px;
+}
+
+.img-wrapper img {
+    float: left;
+    margin-right: 14px;
+}
+
+.img-wrapper img:last-child {
+    margin-right: 0;
+}
+
+.ss {
+    position: absolute;
+    top: 14px;
+    right: 68px;
+}
+.ss2 {
+    position: absolute;
+    top: 14px;
+    right: 143px;
+}
+
+

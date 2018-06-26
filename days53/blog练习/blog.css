@@ -1,0 +1,111 @@
+/*通用样式*/
+body{
+    font-size: 14px;
+}
+.clearfix:after{
+    content: "";
+    clear: both;
+    display: block;
+}
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+.fl{
+    float: left;
+}
+
+.fr{
+    float: right;
+}
+/*左侧样式*/
+.blog-left{
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    top: 30px;
+    left: 0;
+    background-color: #292929;
+}
+
+.picture{
+    width: 100px;
+    margin: 20px auto;
+    border-radius: 50%;
+    border: 5px solid white;
+    overflow: hidden;
+}
+.picture img{
+    width: 100%;
+}
+.blog-user{
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.disc{
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.mark{
+    margin-top: 30px;
+}
+.mark li{
+    margin-top: 15px;
+}
+
+.mark a{
+    color: #666666;
+}
+.mark a:hover{
+    color: white;
+}
+
+
+/*右侧样式*/
+.blog-right{
+    width: 80%;
+    margin-top: 30px;
+    background-color: #eeeeee;
+}
+
+.article *{
+    padding: 10px;
+}
+.article_list{
+    width: 80%;
+    margin-left: 30px;
+}
+
+.article{
+    width: 80%;
+    background-color: white;
+    margin-top: 20px;
+    box-shadow: 3px 3px 3px rgba(0,0,0, 0.2);
+}
+
+
+.title{
+    font-size: 18px;
+    font-weight: bold;
+    border-left: 5px solid #181818;
+}
+
+.content{
+    margin: 0 10px 10px 10px;
+    border-bottom: 1px solid black;
+}
+
+
+
+
+
+

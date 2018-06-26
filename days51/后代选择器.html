@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<title>后代选择器</title>
+
+    <style type="text/css">
+        div p {
+            color: red;
+        }
+        body>p {
+          color: chartreuse;
+        }
+        #id1 p {
+            font-size: 50px;
+        }
+
+        div ul li a {
+            font-size: 50px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <p>我是body下的段落1</p>
+    <!--如果想为div内所有标签都设置属性，无论用id还是class都不合理，因为当div内的标签过多，我们无法加那么多id或者class-->
+    <div id="id1" class="part1">
+        <p>我是div下的段落1</p>
+        <p>我是div下的段落2</p>
+        <ul>
+            <li class="aaa">
+                <p class="ccc">我是ul>li下的段落1</p>
+                <p class="ddd">我是ul>li下的段落</p>
+                <a href="">点我啊1</a>
+            </li>
+            <li>
+                <a href="#">点我啊2</a>
+            </li>
+        </ul>
+    </div>
+    <p>我是body下的段落2</p>
+</body>
+</html>

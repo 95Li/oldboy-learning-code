@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>输入框组件</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="bootstrap-3.3.7/css/bootstrap.min.css">
+    <script src="bootstrap-3.3.7/js/bootstrap.js"></script>
+    <style>
+        body {
+            margin: 50px;
+        }
+        #ip{
+            width: 60px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="row">
+    <div class="col-lg-6">
+        <div id="line" class="input-group">
+            <div class="input-group-btn">
+                <!--第一个按钮-->
+                <button id="add" type="button" class="btn btn-default " aria-label="Left Align">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                </button>
+                 <!--第二个按钮-->
+                <button id="ip" type="button" class="btn btn-default ">IP</button>
+                <!--下拉框-->
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <!--下拉框内容-->
+                <ul class="dropdown-menu">
+                    <li><a href="#">IP</a></li>
+                    <li><a href="#">WLAN</a></li>
+                    <li><a href="#">状态</a></li>
+                </ul>
+
+            </div><!-- /btn-group -->
+            <!--文本框-->
+            <input type="text" class="form-control" aria-label="...">
+
+            <!--<div class="col-lg-6"></div>-->
+        </div><!-- /.col-lg-6 -->
+    </div><!-- /input-group -->
+</div>
+<script>
+    $("#add").click(function () {
+        var $line = $("#line").clone()
+        $line.find("span").removeClass("glyphicon-plus").addClass("glyphicon-minus")
+        $line.find("#add").attr("id", "reduce")
+        $("#line").after($line)
+    });
+    $(".row").on("click", "#reduce", function () {
+        $(this).parent().parent().remove()
+    });
+    $(".row").on("click", "li", function () {
+        var $val = $(this).text()
+
+        var $a = $(this).parent().parent().find("button")
+        console.log($a[0])
+        $(this).parent().parent().find("button").eq(1).text($val)
+    })
+</script>
+</body>
+</html>

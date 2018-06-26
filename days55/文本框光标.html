@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本框光标</title>
+</head>
+<body>
+<input type="text" id="t" value="海飞丝">
+<script>
+    var tElem=document.getElementById("t")
+    tElem.onfocus=function () {
+        t.value=""
+    }
+    tElem.onblur=function () {
+        t.value="海飞丝"
+    }
+</script>
+</body>
+</html>

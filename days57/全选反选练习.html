@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全选反选练习</title>
+</head>
+<body>
+<button id="b1">全选</button>
+<button id="b2">取消</button>
+<button id="b3">反选</button>
+<table border="1">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>姓名</th>
+            <th>爱好</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>EGON</td>
+        <td>喊麦</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>Alex</td>
+        <td>xxxxx</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>liu</td>
+        <td>%%%%%%</td>
+    </tr>
+    </tbody>
+</table>
+<script src="../days56/jquery-3.3.1.min.js"></script>
+<script>
+    $("#b1").click(function () {
+        $(":checkbox").prop("checked",true)
+    })
+    $("#b2").click(function () {
+        $(":checkbox").prop("checked",false)
+    })
+    $("#b3").click(function () {
+        var $checkboxs=$(":checkbox")
+        for(var i=0;i<$checkboxs.length;i++){
+            var $checkbox=$checkboxs.eq(i)
+            var flog=$checkbox.prop("checked")
+            $checkbox.prop("checked",!flog)
+        }
+    })
+</script>
+</body>
+</html>

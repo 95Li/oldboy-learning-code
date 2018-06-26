@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+</head>
+<body>
+<form action="https://www.baidu.com">
+    <fieldset>
+    <legend>注册页面</legend>
+        <p>
+            用户名：<input type="text" placeholder="请输入用户名" name="username">
+        </p>
+        <p>
+            密码：<input type="password" placeholder="请输入6-8位密码" name="password">
+        </p>
+        <p>
+            性别：
+            <input type="radio" name="gender" value="male" id="ml" checked="checked"><label for="ml">男</label>
+            <input type="radio" name="gender" value="female" id="fm"><label for="fm">女</label>
+        </p>
+
+        <p>
+            年龄：<input type="date" name="age">
+        </p>
+
+        <p>
+            电话：<input type="number" name="telphon">
+        </p>
+
+        <p>
+            邮箱：<input type="email" name="email">
+        </p>
+
+        <p>
+            所在地：
+            <select name="city" style="width: 100px">
+                <optgroup label="一线城市">
+                <option value="beijing" selected="selected">北京</option>
+                <option value="shanghai">上海</option>
+                </optgroup>
+
+                <optgroup label="二线城市">
+                    <option value="suzhou">苏州</option>
+                    <option value="nanjing">南京</option>
+                </optgroup>
+            </select>
+        </p>
+
+        <p>
+            爱好：
+            <input type="checkbox" name="hobbies" value="baskeball" id="bkb"><label for="bkb">篮球</label>
+            <input type="checkbox" name="hobbies" value="football" id="ftb"><label for="ftb">足球</label>
+            <input type="checkbox" name="hobbies" value="pingpong" id="pp"><label for="pp">乒乓球</label>
+        </p>
+
+        <p>
+
+           个人描述：
+            <textarea name="discription" id="" cols="30" rows="10" style="resize: none"></textarea>
+        </p>
+
+        <p>
+            <input type="submit" value="注册">&nbsp;&nbsp;&nbsp;
+            <input type="reset" >
+        </p>
+        
+</fieldset>
+
+</form>
+
+</body>
+</html>

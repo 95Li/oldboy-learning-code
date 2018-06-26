@@ -1,0 +1,111 @@
+import json
+import struct
+import hashlib
+from socket import *
+
+
+client=socket(AF_INET,SOCK_STREAM)
+client.connect(('192.168.12.108',8082))
+BASE_PATH='F:\python\object\days2\days26\FTP\客户端文件'
+while True:
+    print('''
+    1.Upload
+    2.Download
+    ''')
+
+    #上传和下载的文件存于 upload 文件夹下
+
+
+    choice=input('Pleasr choice:').strip()
+    #上传
+    if choice=='1':
+        print(('Please enter file name and file path:'))
+        file_name=input('file name:').strip()
+        file_path=input('file path:').strip()
+        if os.path.exists(file_path):
+            file_size =os.path.getsize(file_path)
+
+            # 设置报头
+            hander_dic = {
+                'operation_type':choice,
+                'file_name':file_name,
+                # 'file_path': file_path,
+                'total_size': file_size
+            }
+            hander_json = json.dumps(hander_dic)
+            hander_bytes = hander_json.encode('utf-8')
+
+            # 发送报头的长度
+            hander_size = len(hander_bytes)
+            client.send(struct.pack('i', hander_size))
+
+            # 发送报头、
+            client.send(hander_bytes)
+
+            # 发送真实数据
+            f = open(file_path, 'rb', encoding='utf-8')
+            while True:
+                line = f.readline()
+                if line:
+                  client.send(line)
+                else:
+                    break
+            f.close()
+
+        else:
+            print('file path error!!!')
+
+    #下载
+    if choice == '2':
+        file_name = input('Please enter file name:').strip()
+        # 设置报头
+        hander_dic = {
+            'operation_type': choice,
+            'file_name': file_name
+
+        }
+        hander_json = json.dumps(hander_dic)
+        hander_bytes = hander_json.encode('utf-8')
+
+        # 发送报头的长度
+        hander_size = len(hander_bytes)
+        client.send(struct.pack('i', hander_size))
+
+        # 发送报头、
+        client.send(hander_bytes)
+
+        #接收报头长度
+        hander_size=struct.unpack('i',client.recv(4))[0]
+
+        #接收报头内容
+        hander_bytes=client.recv(hander_size)
+
+        #解析报头内容
+        hander_json=hander_bytes.decode('utf-8')
+        hander_dic=json.loads(hander_json)
+        print(hander_dic)
+
+        total_size=hander_dic['file_name']
+
+        #根据size获取文件内容
+        file_path=os.path.join(BASE_PATH,hander_dic['total_size'])
+        f = open(file_path, 'a', encoding='utf-8')
+        recv_size=0
+        while recv_size<total_size:
+            recv_date=client.recv(1024)
+            recv_size+=len(recv_date)
+
+            f.write(recv_date.declde('utf-8'))
+        f.close()
+
+
+        # # 判断 传输信息是否正确
+        # m=hashlib.md5()
+        # m.update(res)
+        # if hander_dic['md5']==m.hexdigest():
+        #     print(res.decode('gbk'))
+        # else:
+        #     print('传输错误')
+
+
+client.close()

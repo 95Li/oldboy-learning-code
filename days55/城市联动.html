@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>联动</title>
+</head>
+<body>
+<select name="province" id="province">
+    <option value="">请选择省</option>
+</select>
+<select name="city" id="city">
+    <option value="">请选择市</option>
+</select>
+
+<script>
+    var data = {"上海": ["浦东新区", "黄浦区"], "北京": ["朝阳区", "海定区"]};
+
+    var pElem = document.getElementById("province");
+    var cElem = document.getElementById("city");
+    for (let k in data) {
+        let temp = document.createElement("option");
+        temp.innerText = k;
+        pElem.appendChild(temp)
+    }
+
+    pElem.onchange = function () {
+        let provience = this.value;
+        cElem.innerText = "";
+        for (let i in data[provience]) {
+            let elem = document.createElement("option");
+            elem.innerText = data[provience][i];
+            cElem.appendChild(elem)
+        }
+    }
+
+</script>
+</body>
+</html>

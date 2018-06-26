@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS查找标签示例</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+
+
+<input type="button" id="d1" value="开关1" onclick="change();">
+<input type="button" id="d2" value="开关2">
+
+<div class="d1 bg-red"></div>
+
+<script>
+    function change() {
+        var c1Ele=document.getElementsByClassName("d1")[0];
+        c1Ele.classList.toggle("bg-green")
+    };
+    var b2ele=document.getElementById("d2")
+    b2ele.onclick=()=>{
+        change()
+    };
+
+</script>
+</body>
+</html>

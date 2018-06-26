@@ -1,0 +1,88 @@
+
+import hashlib
+import json
+import struct
+import os
+
+from socket import *
+BASE_DIR=os.path.dirname(__file__)
+
+server=socket(AF_INET,SOCK_STREAM)
+server.bind(('192.168.1.48',8082))
+server.listen(5)
+
+BASE_PATH='F:\python\object\days2\days26\FTP\服务器端文件'
+# 接收到的文件在  download 文件夹下
+while True:
+    conn, addre = server.accept()
+    print(addre)
+    while True:
+        try:
+            msg=conn.recv(1024).decode('utf-8')
+
+            hander_size = struct.unpack('i', conn.recv(4))[0]
+
+            # 接收报头内容
+            hander_bytes = conn.recv(hander_size)
+
+            # 解析报头内容
+            hander_json = hander_bytes.decode('utf-8')
+            hander_dic = json.loads(hander_json)
+            print(hander_dic)
+
+            # 1上传  2下载
+            if hander_dic['operation_type']=='1':
+                total_size = hander_dic['total_size']
+
+                # 根据size获取文件内容
+                recv_size = 0
+                file_path=os.path.join(BASE_PATH,hander_dic['file_name'])
+                f = open(file_path, 'a', encoding='utf-8')
+                recv_size = 0
+                while recv_size < total_size:
+                    recv_date = conn.recv(1024)
+                    recv_size += len(recv_date)
+                    f.write(recv_date.declde('utf-8'))
+                f.close()
+
+            # 1上传  2下载
+            if hander_dic['operation_type'] == '2':
+                path = os.path.join(BASE_PATH, hander_dic['file_name'])
+                if os.path.exists(file_path):
+                    file_size = os.path.getsize(file_path)
+                    #设置报头
+                    hander_dic = {
+                        'operation_type': '2',
+                        'file_name': hander_dic['file_name'],
+                        'total_size': file_size
+                    }
+                    hander_json=json.dumps(hander_dic)
+                    hander_bytes=hander_json.encode('utf-8')
+
+                    #发送报头的长度
+                    hander_size=len(hander_bytes)
+                    conn.send(struct.pack('i',hander_size))
+
+                    #发送报头、
+                    conn.send(hander_bytes)
+
+                    #发送真实数据
+                    f = open(file_path, 'rb', encoding='utf-8')
+                    while True:
+                        line = f.readline()
+                        if line:
+                            conn.send(line)
+                        else:
+                            break
+                    f.close()
+                else:
+                    print('file path error!!!')
+
+        except ConnectionResetError:
+            break
+    conn.close()
+server.close()
+
+
+
+

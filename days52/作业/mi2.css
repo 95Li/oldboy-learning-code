@@ -1,0 +1,124 @@
+/*通用样式*/
+body{
+    font-size: 18px;
+}
+
+.clearfix:after{
+    content:"";
+    clear: both;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.container{
+    width: 1226px;
+    margin: 0px auto;
+}
+
+/*顶部导航条 样式*/
+.nav{
+    height: 50px;
+    width: 100%;
+    float: top;
+    position: absolute;
+    top: 0px;
+    background-color: #181818;
+}
+.nav a{
+    color: #a2a2a2;
+}
+.nav a:hover{
+    color: white;
+}
+
+.nav-left ul li{
+   float: left;
+    margin-right: 6px;
+}
+.nav-right ul li{
+    float: right;
+    margin-left: 6px;
+}
+
+/*顶部菜单样式*/
+.top-menu{
+    height: 88px;
+    width: 100%;
+    margin-top: 70px;
+}
+
+.top-list li{
+    float: left;
+    margin-right: 10px;
+}
+
+.menu-left a{
+    color: #181818;
+}
+.menu-left a:hover{
+    color: #ff7d1d;
+}
+
+/*首屏样式*/
+.page-main{
+    width: 100%;
+    height: 460px;
+}
+.left-info{
+    height: 460px;
+    width: 220px ;
+    background-color: #292929;
+}
+
+.left-info ul{
+    height: 100%;
+    width: 100%;
+    /*padding: 0px;*/
+    /*position: relative;*/
+    /*top: 10px;*/
+
+}
+
+.left-info ul li{
+    height: 24px;
+    padding: 10px 0px;
+}
+
+.left-info ul li:hover{
+    background-color: #ff9019;
+}
+
+.left-info a{
+    color: white;
+}
+
+
+/*广告栏*/
+.pag-ad{
+    height: 170px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.img2{
+   margin-left: 7px;
+}
+
+
+
+
+
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>左侧菜单作业</title>
+    <style>
+        .menu {
+            width: 100px;
+            background-color: black;
+        }
+
+        .body div {
+            width: 100px;
+            height: 30px;
+            margin: 1px;
+            background-color: white;
+        }
+
+        .title{
+            width: 100px;
+            height: 30px;
+            margin: 1px;
+            background-color: #f4ff54;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="menu">
+    <div class="item">
+        <div class="title">菜单一</div>
+        <div class="body hide">
+            <div>内容一</div>
+            <div>内容一</div>
+            <div>内容一</div>
+            <div>内容一</div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="title">菜单二</div>
+        <div class="body hide">
+            <div>内容二</div>
+            <div>内容二</div>
+            <div>内容二</div>
+            <div>内容二</div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="title">菜单三</div>
+        <div class="body hide">
+            <div>内容三</div>
+            <div>内容三</div>
+            <div>内容三</div>
+            <div>内容三</div>
+        </div>
+    </div>
+</div>
+
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+    $(".title").click(function () {
+        $(".body").addClass("hide")
+        $(this).next().toggleClass("hide")
+    });
+</script>
+</body>
+</html>

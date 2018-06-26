@@ -1,0 +1,134 @@
+/*通用样式*/
+body{
+    font-size: 18px;
+}
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+a {
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+
+/*顶部样式*/
+.nav{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    position: absolute;
+    top: 0px;
+}
+
+.container{
+    width: 1226px;
+    margin: 0 auto;
+}
+.nav-left li{
+    float: left;
+    margin-right: 10px;
+}
+.nav-right li{
+    float: right;
+    margin-left: 10px;
+    font-size: 10px;
+}
+
+.nav a:hover {
+    color: white;
+}
+
+.nav a{
+    color: #989898;
+}
+
+
+/*顶部菜单栏样式*/
+.top-menu{
+    height: 88px;
+    width: 100%;
+    margin-top: 70px;
+    /*padding-top: 20px;*/
+}
+
+.menu-left{
+    position: relative;
+    left: 50px;
+}
+.menu-left ul{
+    margin: 20px auto ;
+}
+
+.menu-left ul a{
+    color: black;
+    line-height: 55px;
+}
+.menu-left ul a:hover{
+    color: #ff9019;
+}
+
+.menu-left li{
+    float:left;
+    margin-right: 10px;
+    position: relative;
+    bottom: 20px;
+}
+
+.menu-right input[type="text"]{
+   height: 45px;
+}
+
+.menu-right input[type="submit"]{
+   height: 50px;
+   position: relative;
+   left: -10px;
+}
+
+/*首屏 样式*/
+
+.left-info{
+    width: 220px;
+    height: 460px;
+    /*padding: 20px 0;*/
+    background-color: #3d3d3d;
+}
+
+.left-info ul{
+    -webkit-padding-start: 0px;
+    position: absolute;
+    /*top: 20px;*/
+    /*bottom: 20px;*/
+}
+.left-info li{
+    height: 42px;
+    width: 100%;
+    padding-left: 40px;
+
+}
+
+.left-info li:hover{
+    background-color: #ff6700;
+}
+.left-info a {
+    color: white;
+    line-height: 42px;
+}
+
+/*广告栏*/
+.pag-ad{
+    margin: 20px 0px;
+}
+.img2{
+    margin-left: 5px;
+}
+
+

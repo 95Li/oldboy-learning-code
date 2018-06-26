@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UPLOAD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        div{
+            margin: 15px;
+
+        }
+    </style>
+</head>
+<body>
+
+<form action="/upload/" method="post" enctype="multipart/form-data">
+    <div>
+        姓名：<input type="text" name="name">
+    </div>
+    <div>
+        <input type="file" name="upload_file">
+    </div>
+    <div>
+        <input type="submit"></div>
+</form>
+</body>
+</html>

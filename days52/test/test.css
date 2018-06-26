@@ -1,0 +1,35 @@
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.a1 {
+    float: right;
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+}
+
+.a2 {
+    float: left;
+    width: 200px;
+    height: 200px;
+    background-color: #190fff;
+}
+
+.b1 {
+    float: right;
+    width: 100px;
+    height: 100px;
+    background-color: #ff305c;
+}
+
+.b2 {
+    float: left;
+    width: 100px;
+    height: 100px;
+    background-color: #ff1315;
+}
+

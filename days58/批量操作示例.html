@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>批量操作示例</title>
+</head>
+<body>
+<table border="1">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>姓名</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>Egon</td>
+        <td><select>
+            <option value="1">上线</option>
+            <option value="2">下线</option>
+            <option value="3">停职</option>
+        </select></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>Egon</td>
+        <td><select>
+            <option value="1">上线</option>
+            <option value="2">下线</option>
+            <option value="3">停职</option>
+        </select></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td>Egon</td>
+        <td><select>
+            <option value="1">上线</option>
+            <option value="2">下线</option>
+            <option value="3">停职</option>
+        </select></td>
+    </tr>
+    </tbody>
+</table>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+    var flag = false
+    <!--监听键盘按键按下事件-->
+    $(window).on("keydown", function (e) {
+        if (e.keyCode == 16) {
+            flag = true
+        }
+    })
+    <!--监听键盘按键抬起事件-->
+    $(window).on("keyup", function (e) {
+        if (e.keyCode == 16) {
+            flag = false
+        }
+    })
+    $("select").change(function () {
+        var $val=this.value
+        var $check=$(this).parent().parent().find("input:checkbox").prop("checked")
+        if (flag&$check){
+            var $checks =$("input:checked")
+            $checks.each(function () {
+                // console.log(this)
+                $(this).parent().parent().find("select").val($val)
+            })
+        }else{
+                $(this).parent().parent().find("select").val($val)
+            }
+    })
+
+
+</script>
+</body>
+</html>

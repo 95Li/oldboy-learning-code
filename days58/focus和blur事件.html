@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>focus和blur事件</title>
+</head>
+<body>
+<input type="text" id="input">
+
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+    <!--当获取焦点时-->
+    $("#input").on("focus",function () {
+        $(this).val("获取焦点")
+    });
+    //当失去焦点时
+    $("#input").on("blur",function () {
+        $(this).val("失去焦点")
+    });
+    //当文本框里值改变时
+    $("#input").on("input",function () {
+        console.log($(this).val())
+    });
+    
+</script>
+</body>
+</html>
