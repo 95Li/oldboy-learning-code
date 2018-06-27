@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<input type="text" id="i1">+ <input type="text" id="i2">= <input type="text" id="i3">
+<button id="b1">提交</button>
+
+<input type="file" id="f" name="file">
+<button id="b2">提交</button>
+<script src="/static/jquery-3.3.1.min.js"></script>
+<script>
+    $('#b1').click(function () {
+        $.ajax({
+            url: '/ajax_test/',
+            type: 'POST',
+            data: {i1: $('#i1').val(), i2: JSON.stringify([$('#i2').val(), 123, "dvzsd", "dxvd"])},
+            success: function (data) {
+                $('#i3').val(data);
+            }
+        })
+    })
+    $("#b2").click(function () {
+        var formData =new FormData();
+        formData.append('f1',$('#f')[0].files[0]);
+        $.ajax({
+            url:'/upload/',
+            type:'POST',
+            processData:false,  //告诉jQuery不要去处理发送的数据
+            contentType:false,  //告诉jQuery不要去设置content-Type请求头
+            data:formData,
+            success:function (data) {
+                console.log(data)
+            }
+        })
+    })
+
+</script>
+</body>
+</html>
